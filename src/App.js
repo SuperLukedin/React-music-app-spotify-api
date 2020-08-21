@@ -13,8 +13,7 @@ function App() {
   const [{ user, token }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
-    const hash = getTokenFromUrl()
-    
+    const hash = getTokenFromUrl()  
     window.location.hash = ""
     const _token = hash.access_token
 
@@ -25,7 +24,6 @@ function App() {
       })
 
       spotify.setAccessToken(_token)
-
       spotify.getMe()
       .then(user => {
         dispatch({
@@ -33,15 +31,19 @@ function App() {
           user: user
         })
       })
+      spotify.getUserPlaylists()
+        .then((playlists) => {
+          dispatch({
+            type: "SET_PLAYLISTS",
+            playlists: playlists
+          })
+        })
     }
   }, [])
 
-  console.log('user: ', user)
-  console.log('token: ', token)
-
   return (
     <div className="app">
-      {token ? <Player /> : <Login />}   
+      {token ? <Player spotify={spotify} /> : <Login />}   
     </div>
   );
 }
