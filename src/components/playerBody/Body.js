@@ -6,7 +6,6 @@ function Body(spotify) {
     return (
         <div className="body">
             <Header spotify={spotify} />
-
         </div>
     )
 }

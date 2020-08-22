@@ -22,10 +22,11 @@ function App() {
         type: 'SET_TOKEN',
         token: _token,
       })
-
+      debugger
       spotify.setAccessToken(_token)
       spotify.getMe()
       .then(user => {
+        debugger
         dispatch({
           type: 'SET_USER',
           user: user
