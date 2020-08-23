@@ -1,14 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<a href="screenshots/Login.PNG">
-  <img alt="" src="screenshots/Login.png" align"center" height="500" width="500">
-</a>
-<a href="screenshots/Auth.PNG">
-  <img alt="" src="screenshots/Auth.png" align"center" height="500" width="500">
-</a>
-<a href="screenshots/player.PNG">
-  <img alt="" src="screenshots/player.png" align"center" height="500" width="500">
-</a>
+## Login Page
+
+![](https://github.com/SuperLukedin/React-music-app-spotify-api/blob/master/screenshots/Login.PNG)
+
+## Login throght spotify account
+![](https://github.com/SuperLukedin/React-music-app-spotify-api/blob/master/screenshots/Auth.PNG)
+
+## The player page (static)
+![](https://github.com/SuperLukedin/React-music-app-spotify-api/blob/master/screenshots/player.PNG)
+
 
 
 ## Available Scripts
