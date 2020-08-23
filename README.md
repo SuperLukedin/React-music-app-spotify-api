@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<a href="screenshots/Login.png">
+<a href="screenshots/Login.PNG">
   <img alt="" src="screenshots/Login.png" align"center" height="500" width="500">
 </a>
-<a href="screenshots/Auth.png">
+<a href="screenshots/Auth.PNG">
   <img alt="" src="screenshots/Auth.png" align"center" height="500" width="500">
 </a>
-<a href="screenshots/player.png">
+<a href="screenshots/player.PNG">
   <img alt="" src="screenshots/player.png" align"center" height="500" width="500">
 </a>
 
