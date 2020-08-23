@@ -22,16 +22,15 @@ function App() {
         type: 'SET_TOKEN',
         token: _token,
       })
-      debugger
       spotify.setAccessToken(_token)
       spotify.getMe()
-      .then(user => {
-        debugger
-        dispatch({
-          type: 'SET_USER',
-          user: user
+        .then(user => {
+          dispatch({
+            type: 'SET_USER',
+            user: user
+          })
         })
-      })
+
       spotify.getUserPlaylists()
         .then((playlists) => {
           dispatch({
@@ -39,6 +38,15 @@ function App() {
             playlists: playlists
           })
         })
+      
+      spotify.getPlaylist('3KxZk9afEIzSaNL9Cl7dLC')
+        .then(response => {
+          dispatch({
+            type: 'SET_DISCOVER_WEEKLY',
+            discover_weekly: response
+          })
+        })
+
     }
   }, [])
 

@@ -2,12 +2,10 @@ export const initialState = {
     user: null,
     playlists: [],
     playing: false,
-    item: null,
-    // token: 'BQD5dtRh_UzOeFjKo_0m8RSySKir5tUAeElFbqt8RZi74Offgstnqr3qzqh4TFAkpX1xSeoFRArQE-nuear1Q9AcqSJ2qpcR2HC5IbRJE3Gz06qSHJO6H9hoBlBKgDsNLaJ8gUVor0BlgQTK2TNPmTm1nMIGkQyHOjvU5QaRShxr-Xb5'
+    item: null
 }
 
 const reducer = (state, action) => {
-    debugger
     switch(action.type) {
         case 'SET_USER':
             return {
@@ -23,6 +21,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 playlists: action.playlists
+            }
+        case 'SET_DISCOVER_WEEKLY':
+            return {
+                ...state,
+                discover_weekly: action.discover_weekly
             }
         default:
             return state
